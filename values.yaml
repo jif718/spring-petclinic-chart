@@ -139,13 +139,11 @@ startupProbe:
   # 30 × 5s = 150s window for JVM cold start; tune down once you know real boot time
   periodSeconds: 5
   failureThreshold: 30
-
 livenessProbe:
   httpGet:
     path: /actuator/health/liveness
     port: http
   periodSeconds: 10
-
 readinessProbe:
   httpGet:
     path: /actuator/health/readiness
