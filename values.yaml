@@ -137,11 +137,7 @@ startupProbe:
     path: /
     port: http
   periodSeconds: 5
-<<<<<<< HEAD
-  failureThreshold: 30
-=======
   failureThreshold: 40   # 200s window, 先给足
->>>>>>> fe3c88a (update)
 livenessProbe:
   httpGet:
     path: /
