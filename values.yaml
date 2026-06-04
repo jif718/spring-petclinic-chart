@@ -137,7 +137,7 @@ startupProbe:
     path: /
     port: http
   periodSeconds: 5
-  failureThreshold: 40   # 200s window, 先给足
+  failureThreshold: 40 # 200s window, 先给足
 livenessProbe:
   httpGet:
     path: /
