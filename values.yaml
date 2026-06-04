@@ -139,16 +139,19 @@ startupProbe:
     port: http
   periodSeconds: 5
   failureThreshold: 40 # 200s window, 先给足
+  timeoutSeconds: 5
 livenessProbe:
   httpGet:
     path: /
     port: http
   periodSeconds: 10
+  timeoutSeconds: 5
 readinessProbe:
   httpGet:
     path: /
     port: http
   periodSeconds: 10
+  timeoutSeconds: 5
   # This section is for setting up autoscaling more information can be found here: https://kubernetes.io/docs/concepts/workloads/autoscaling/
 autoscaling:
   enabled: false
